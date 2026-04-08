@@ -30,10 +30,10 @@ window["ai_edge_gallery_get_result"] = async (data, secret) => {
         input: [
           {
             role: "user",
-            content: "Search X for recent posts about: " + query + ". Summarize the top " + maxResults + " most relevant results with author names and dates."
+            content: "Search for the most recent and relevant information about: " + query + ". Use X search for social media posts and web search for news/articles. Summarize the top " + maxResults + " results with sources and dates."
           }
         ],
-        tools: [{ type: "x_search" }]
+        tools: [{ type: "x_search" }, { type: "web_search" }]
       })
     });
 
@@ -59,7 +59,7 @@ window["ai_edge_gallery_get_result"] = async (data, secret) => {
     return JSON.stringify({ result: truncated });
 
   } catch (e) {
-    return JSON.stringify({ error: "X Search failed: " + e.message });
+    return JSON.stringify({ error: "Search failed: " + e.message });
   }
 };
 </script>

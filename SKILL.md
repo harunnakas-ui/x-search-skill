@@ -1,6 +1,6 @@
 ---
 name: x-search
-description: Search X (Twitter) for real-time posts, news, and trending topics using the Grok API with live X search.
+description: Search X (Twitter) posts and the web for real-time news, trending topics, and current events using the Grok API.
 metadata:
   require-secret: true
   require-secret-description: Enter your xAI API key from console.x.ai (starts with xai-)
