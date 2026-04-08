@@ -4,9 +4,7 @@ description: Search X (Twitter) for real-time posts, news, and trending topics u
 metadata:
   homepage: https://x.ai
   require-secret: true
-  require-secret-description: |
-    Enter your xAI API key. Get one at https://console.x.ai
-    (Your key starts with "xai-")
+  require-secret-description: Enter your xAI API key (starts with "xai-"). Get one at console.x.ai
 ---
 
 This skill searches X (formerly Twitter) for real-time information using the Grok API.
