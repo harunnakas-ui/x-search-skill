@@ -18,3 +18,9 @@ The tool returns a result field with the top X posts and a summary. Present the 
 
 Example call:
 {"query": "Champions League 2026", "max_results": 5}
+
+## Security Note
+
+This skill uses [corsproxy.io](https://corsproxy.io) as a CORS proxy to enable browser-based API calls to the xAI Grok API. This is a client-side workaround — your API key is entered by the user at runtime and is **never stored** in the code.
+
+**Be aware:** Your xAI API key is transmitted through corsproxy.io when using this skill in a browser context. For production or sensitive use cases, consider running API calls through your own backend instead.
